@@ -5947,8 +5947,11 @@ end)
     							if game:GetService("Workspace").Enemies:FindFirstChild("Diablo [Lv. 1750]") then
     								for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
     									if v.Name == "Diablo [Lv. 1750]" then
+    									    Clip = true
+    									    repeat wait() TP2(v.HumanoidRootPart.CFrame * CFrame.new(1,20,1))until _G.StopTween == true or not _G.AutoBartilo or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-v.HumanoidRootPart.Position).Magnitude <= 10
+    									    wait(2)
     										repeat wait()
-    										    Clip = true
+    										    
     										    
     											if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
     												local args = {
@@ -5981,8 +5984,11 @@ end)
     							if game:GetService("Workspace").Enemies:FindFirstChild("Deandre [Lv. 1750]") then
     								for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
     									if v.Name == "Deandre [Lv. 1750]" then
+    									    Clip = true
+    									    repeat wait() TP2(v.HumanoidRootPart.CFrame * CFrame.new(1,20,1))until _G.StopTween == true or not _G.AutoBartilo or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-v.HumanoidRootPart.Position).Magnitude <= 10
+    									    wait(2)
     										repeat wait()
-    										    Clip = true
+    										    
     											if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
     												local args = {
     													[1] = "Buso"
@@ -6014,8 +6020,11 @@ end)
     							if game:GetService("Workspace").Enemies:FindFirstChild("Urban [Lv. 1750]") then
     								for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
     									if v.Name == "Urban [Lv. 1750]" then
+    									    Clip = true
+    									    repeat wait() TP2(v.HumanoidRootPart.CFrame * CFrame.new(1,20,1))until _G.StopTween == true or not _G.AutoBartilo or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-v.HumanoidRootPart.Position).Magnitude <= 10
+    									    wait(2)
     										repeat wait()
-    										    Clip = true
+    									
     					
     											if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
     												local args = {
