@@ -4519,7 +4519,6 @@ end
     end)
 
 function TP(P1)
-    game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(11)
     Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
     if Distance < 100 then
         Speed = 500
@@ -5950,6 +5949,7 @@ end)
     									if v.Name == "Diablo [Lv. 1750]" then
     										repeat wait()
     										    Clip = true
+    										    game:GetService("Workspace").Map.Waterfall.Model.Part.CanCollide = false
     											if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
     												local args = {
     													[1] = "Buso"
@@ -5973,6 +5973,7 @@ end)
     								end
     							else
     								spawn(function()
+    								    game:GetService("Workspace").Map.Waterfall.Model.Part.CanCollide = false
     									TP2(game:GetService("ReplicatedStorage")["Diablo [Lv. 1750]"].HumanoidRootPart.CFrame *CFrame.new(0,0,15))
     								end)
     							end
@@ -5982,6 +5983,8 @@ end)
     									if v.Name == "Deandre [Lv. 1750]" then
     										repeat wait()
     										    Clip = true
+    										    
+    										    game:GetService("Workspace").Map.Waterfall.Model.Part.CanCollide = false
     											if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
     												local args = {
     													[1] = "Buso"
@@ -6005,6 +6008,7 @@ end)
     								end
     							else
     								spawn(function()
+    								    game:GetService("Workspace").Map.Waterfall.Model.Part.CanCollide = false
     									TP2(game:GetService("ReplicatedStorage")["Deandre [Lv. 1750]"].HumanoidRootPart.CFrame *CFrame.new(0,0,15))
     								end)
     							end
@@ -6014,6 +6018,7 @@ end)
     									if v.Name == "Urban [Lv. 1750]" then
     										repeat wait()
     										    Clip = true
+    										    game:GetService("Workspace").Map.Waterfall.Model.Part.CanCollide = false
     											if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
     												local args = {
     													[1] = "Buso"
@@ -6037,6 +6042,7 @@ end)
     								end
     							else
     								spawn(function()
+    								    game:GetService("Workspace").Map.Waterfall.Model.Part.CanCollide = false
     									TP(game:GetService("ReplicatedStorage")["Urban [Lv. 1750]"].HumanoidRootPart.CFrame *CFrame.new(0,0,15))
     								end)
     							end
@@ -6102,6 +6108,7 @@ end)
 spawn(function()
     while wait() do
         if _G.AutoColor then
+            wait(10)
                         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("activateColor","Winter Sky")
             			wait(0.5)
             			repeat TP2(CFrame.new(-5420.16602, 1084.9657, -2666.8208)) wait() until _G.StopTween == true or not _G.Tushitahop or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-5420.16602, 1084.9657, -2666.8208)).Magnitude <= 10
