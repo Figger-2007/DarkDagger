@@ -4457,7 +4457,7 @@ end
 
 
 function TP2(P1)
-    game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(11)
+    --game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(11)
 	Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
 	if Distance < 1000 then
 		Speed = 500
