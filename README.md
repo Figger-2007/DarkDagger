@@ -3688,6 +3688,7 @@ end
 	
 	page1:Toggle("Open Color",false,function(vu)
         _G.AutoColor = vu
+        _G.AntiAFK = vu
 	end)
 	
 	page1:Line()
@@ -4457,7 +4458,6 @@ end
 
 
 function TP2(P1)
-    --game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(11)
 	Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
 	if Distance < 1000 then
 		Speed = 500
@@ -5937,6 +5937,7 @@ end)
 		spawn(function()
 			while wait() do
 				if  _G.EliteHunt then
+				    pcall(function()
 				    if not  game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") and not game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") then
     					if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == false then
     						repeat TP2(CFrame.new(-5418.892578125, 313.74130249023, -2826.2260742188)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-5418.892578125, 313.74130249023, -2826.2260742188)).Magnitude <= 10
@@ -6044,7 +6045,8 @@ end)
     				elseif game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") or game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") then
                         _G.JOK = true
                         _G.EliteHunt = false
-					end
+    				end
+				end)
 				end
 			end
 		end)
@@ -6074,6 +6076,7 @@ spawn(function()
     							for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
     									if v.Name == "rip_indra True Form [Lv. 5000] [Raid Boss]" then
     									    repeat wait()
+    									        pcall(function()
     									        Clip = true
                                                 EquipWeapon(_G.SelectWeapon)
                                                 TP(v.HumanoidRootPart.CFrame*CFrame.new(0,25,0))
@@ -6084,6 +6087,7 @@ spawn(function()
                                                 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
                                                 end
                                                 game:GetService'VirtualUser':CaptureController()
+                                                end)
                                                 game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
     									    until v.Humanoid.Health <= 0
                                         Clip = false
@@ -6094,3 +6098,23 @@ spawn(function()
         end
     end
 end)
+
+spawn(function()
+    while wait() do
+        if _G.AutoColor then
+                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("activateColor","Winter Sky")
+            			wait(0.5)
+            			repeat TP2(CFrame.new(-5420.16602, 1084.9657, -2666.8208)) wait() until _G.StopTween == true or not _G.Tushitahop or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-5420.16602, 1084.9657, -2666.8208)).Magnitude <= 10
+            			wait(0.5)
+            			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("activateColor","Pure Red")
+            			wait(0.5)
+            			repeat TP2(CFrame.new(-5414.41357, 309.865753, -2212.45776)) wait() until _G.StopTween == true or not _G.Tushitahop or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-5414.41357, 309.865753, -2212.45776)).Magnitude <= 10
+            			wait(0.5)
+            			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("activateColor","Snow White")
+            			wait(0.5)
+            			repeat TP2(CFrame.new(-4971.47559, 331.565765, -3720.02954)) wait() until _G.StopTween == true or not _G.Tushitahop or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-4971.47559, 331.565765, -3720.02954)).Magnitude <= 10
+            			wait(0.5)            
+        end
+    end
+end)
+
