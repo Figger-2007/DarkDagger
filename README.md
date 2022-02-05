@@ -5949,7 +5949,7 @@ end)
     									if v.Name == "Diablo [Lv. 1750]" then
     										repeat wait()
     										    Clip = true
-    										    game:GetService("Workspace").Map.Waterfall.Model.Part.CanCollide = false
+    										    
     											if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
     												local args = {
     													[1] = "Buso"
@@ -5973,7 +5973,7 @@ end)
     								end
     							else
     								spawn(function()
-    								    game:GetService("Workspace").Map.Waterfall.Model.Part.CanCollide = false
+    								    
     									TP2(game:GetService("ReplicatedStorage")["Diablo [Lv. 1750]"].HumanoidRootPart.CFrame *CFrame.new(0,0,15))
     								end)
     							end
@@ -5983,8 +5983,6 @@ end)
     									if v.Name == "Deandre [Lv. 1750]" then
     										repeat wait()
     										    Clip = true
-    										    
-    										    game:GetService("Workspace").Map.Waterfall.Model.Part.CanCollide = false
     											if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
     												local args = {
     													[1] = "Buso"
@@ -6008,7 +6006,7 @@ end)
     								end
     							else
     								spawn(function()
-    								    game:GetService("Workspace").Map.Waterfall.Model.Part.CanCollide = false
+    		
     									TP2(game:GetService("ReplicatedStorage")["Deandre [Lv. 1750]"].HumanoidRootPart.CFrame *CFrame.new(0,0,15))
     								end)
     							end
@@ -6018,7 +6016,7 @@ end)
     									if v.Name == "Urban [Lv. 1750]" then
     										repeat wait()
     										    Clip = true
-    										    game:GetService("Workspace").Map.Waterfall.Model.Part.CanCollide = false
+    					
     											if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
     												local args = {
     													[1] = "Buso"
@@ -6042,7 +6040,7 @@ end)
     								end
     							else
     								spawn(function()
-    								    game:GetService("Workspace").Map.Waterfall.Model.Part.CanCollide = false
+
     									TP(game:GetService("ReplicatedStorage")["Urban [Lv. 1750]"].HumanoidRootPart.CFrame *CFrame.new(0,0,15))
     								end)
     							end
