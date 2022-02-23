@@ -4652,6 +4652,25 @@ if _G.FastAttack1 == true then
     end
 end
 
+spawn(function()
+        while game:GetService("RunService").Stepped:wait(15) do
+            character = game.Players.LocalPlayer.Character 
+            if _G.NoClip or _G.Auto_Farm or _G.Auto_Farm_Boss or _G.AutoDagger then
+                pcall(function()
+                    for _, v in pairs(character:GetDescendants()) do
+                        pcall(function()
+                            if v:IsA("BasePart") then
+                                pcall(function()
+                                v.CanCollide = false
+                                end)
+                            end
+                        end)
+                    end
+                end)
+            end
+        end
+end)
+
 -------------------------------------------------------------------------------------------------------------------------------------------------- Stats
 
 spawn(function()
