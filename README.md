@@ -1,4 +1,4 @@
-_G.SelectWeapon = "Superhuman"
+
 _G.EliteHunt = false
 
 if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
@@ -3692,6 +3692,36 @@ end
 	end)
 	
 	page1:Line()
+	
+	spawn(function()
+	    while wait(2) do
+	        pcall(function()
+                if EP then
+                    EquipWeapon(_G.SelectWeapon)
+                end
+            end)
+	    end
+	end)
+
+    local Hop_SelectWeapon = page1:Drop("Select Weapon",false,Wapon,function(Value)
+		_G.SelectWeapon = Value
+		EP = true
+	end)
+    
+	page1:Button("Refresh Weapon",function()
+	    EP = false
+		SelectWeapona:Clear()
+		for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do  
+			if v:IsA("Tool") then
+				SelectWeapona:Add(v.Name)
+			end
+		end
+		for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do  
+			if v:IsA("Tool") then
+				SelectWeapona:Add(v.Name)
+			end
+		end
+	end) 
 	
 	spawn(function()
 		game:GetService("Players").LocalPlayer.Idled:connect(function()
