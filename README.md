@@ -3702,8 +3702,20 @@ end
             end)
 	    end
 	end)
-
-    local Hop_SelectWeapon = page1:Drop("Select Weapon",false,Wapon,function(Value)
+	
+	Wapon = {}
+	for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do  
+		if v:IsA("Tool") then
+			table.insert(Wapon ,v.Name)
+		end
+	end
+	for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do  
+		if v:IsA("Tool") then
+			table.insert(Wapon, v.Name)
+		end
+	end
+	
+    local SelectWeapona = page1:Drop("Select Weapon",false,Wapon,function(Value)
 		_G.SelectWeapon = Value
 		EP = true
 	end)
